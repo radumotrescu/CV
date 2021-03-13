@@ -1,0 +1,181 @@
+%-------------------------
+% Resume in Latex
+% Author : Radu Motrescu
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{{\Large Radu Motrescu}} & Email : \href{mailto:radumotrescu@gmail.com}{radumotrescu@gmail.com}\\
+   & Mobile : +4 0761 657 505 \\
+\end{tabular*}
+
+
+%-----------EDUCATION-----------------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Faculty of Mathematics and Computer Science, Transilvania University}{Brasov, Romania}
+      {Bachelor of Science in Computer Science}{Oct. 2015 -- June. 2018}
+  \resumeSubHeadingListEnd
+
+%---------LEARNING EXPERIENCES----------
+\section{Learning Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Siemens Corporate Technology}{Brasov, Romania}
+      {Intern}{Apr 2017 - June 2017}
+      \resumeItemListStart
+        \resumeItem{Principal Component Analsysis Visualization}
+          {Implemented several Principal Component Analysis algorithms to see the differences between them, using Python and C\# for visualization purposes.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Siemens Industry Software}{Brasov, Romania}
+      {Student}{February 2017 - October 2017}
+      \resumeItemListStart
+        \resumeItem{Spring School \slash\ Summer School}
+          {Took part in the Spring and Summer School programs that Siemens Industry Software provided, which aimed to teach modern C++, coming from people with large ammounts of experience in the industry. These courses culminated in a one month team based project, the result being a small game  framework, written from scratch.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+
+
+%-----------PROFESSIONAL EXPERIENCE-----------------
+\section{Professional Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Siemens Industry Software}{Brasov, Romania}
+      {Software Engineer}{June 2018 - Present}
+      \resumeItemListStart
+        \resumeItem{Simcenter3D}
+          {Simcenter3D is one of the largest CAE applications currently on the market. Worked on the Noise and Vibrations side of the application, with most of the time split between designing UI elements (using a proprietary framework) and writing code that supports the communication between the UI elements and solvers, through the use of both open source and proprietary files and file formats. All of this was done using modern C++ standards.}
+        \resumeItem{Unit testing and automated testing}
+          {Kept the quality of the application in check during development with unit tests and automated tests. Used modern unit testing practices like Test Driven Development when applicable. Developed unit testing tools and upgraded existing ones when new needs appeared.}
+        \resumeItem{Teamwork}
+          {Aided the team's engineers and upper management in understanding development best practices and current limitations of the application from a developer's perspective.}
+        \resumeItem{Project management methodologies}
+          {Worked for one and a half year in a Waterfall environment, going through all the project phases. Later the team changed the approach to an Agile-Scrum style, which meant getting formal training in Agile practices, and contributing to designing different processes that would help the team. In this period I also took on the role of Scrum Master for certain events, when given the chance.}
+        \resumeItem{Tools}
+          {Worked on different internal tools that were used for specific tasks that were not part of the shipped product. These usually were Python scripts and small applications that did internal file conversions.}
+        \resumeItem{Linux}
+          {While most of the work of the application was done on the Windows OS, sometimes Linux specific tasks appeared, usually C++ compatibility fixes or fixing automated and unit tests.}
+        \resumeItem{Application performance improvements}
+          {Worked on multiple tasks that required application benchmarking, usually resulting in doing code changes that improved the performance of certain operations from 10\% to 90\%, while also keeping the code and functionality future proof.}
+      \resumeItemListEnd
+      
+% --------Multiple Positions Heading------------
+%    \resumeSubSubheading
+%     {Software Engineer I}{Oct 2014 - Sep 2016}
+%     \resumeItemListStart
+%        \resumeItem{Apache Beam}
+%          {Apache Beam is a unified model for defining both batch and streaming data-parallel processing pipelines}
+%     \resumeItemListEnd
+%    \resumeSubHeadingListEnd
+%-------------------------------------------
+
+  \resumeSubHeadingListEnd
+
+
+%-----------PROJECTS-----------------
+% \section{Projects}
+%   \resumeSubHeadingListStart
+%     \resumeSubItem{QuantSoftware Toolkit}
+%       {Open source python library for financial data analysis and machine learning for finance.}
+%     \resumeSubItem{Github Visualization}
+%       {Data Visualization of Git Log data using D3 to analyze project trends over time.}
+%     \resumeSubItem{Recommendation System}
+%       {Music and Movie recommender systems using collaborative filtering on public datasets.}
+%     \resumeSubItem{Mac Setup}
+%       {Book that gives step by step instructions on setting up developer environment on Mac OS.}
+%   \resumeSubHeadingListEnd
+
+%
+%--------PROGRAMMING SKILLS------------
+\section{Programming Skills}
+ \resumeSubHeadingListStart
+   \item{
+     \textbf{Languages}{: C++, Python}
+     \hfill
+     \textbf{Version Control Systems}{: Git/GitLab, Mercurial, Perforce}
+   }
+ \resumeSubHeadingListEnd
+
+
+%-------------------------------------------
+\end{document}
