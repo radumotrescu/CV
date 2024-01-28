@@ -50,6 +50,12 @@
   }
 }
 
+\newcommand{\itemSub}[1]{
+  \item\small{
+    \textbf{#1:}
+  }
+}
+
 \newcommand{\resumeSubheading}[4]{
   \vspace{-1pt}\item
     \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
@@ -71,7 +77,7 @@
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
-\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -94,31 +100,45 @@
       {Bachelor of Science in Computer Science}{Oct. 2015 -- June. 2018}
   \resumeSubHeadingListEnd
 
-%---------LEARNING EXPERIENCES----------
-\section{Learning Experience}
-  \resumeSubHeadingListStart
-
-    \resumeSubheading
-      {Siemens Corporate Technology}{Brasov, Romania}
-      {Intern}{Apr 2017 - June 2017}
-      \resumeItemListStart
-        \resumeItem{Principal Component Analsysis Visualization}
-          {Implemented several Principal Component Analysis algorithms to see the differences between them, using Python and C\# for visualization purposes.}
-      \resumeItemListEnd
-    \resumeSubheading
-      {Siemens Industry Software}{Brasov, Romania}
-      {Student}{February 2017 - October 2017}
-      \resumeItemListStart
-        \resumeItem{Spring School \slash\ Summer School}
-          {Took part in the Spring and Summer School programs that Siemens Industry Software provided, which aimed to teach modern C++, coming from people with large ammounts of experience in the industry. These courses culminated in a one month team based project, the result being a small game  framework, written from scratch.}
-      \resumeItemListEnd
-  \resumeSubHeadingListEnd
 
 
 %-----------PROFESSIONAL EXPERIENCE-----------------
 \section{Professional Experience}
   \resumeSubHeadingListStart
 
+    \resumeSubheading
+      {SoundStack}{Remote}
+      {Senior Software Engineer}{January 2022 - Current}
+      \resumeItemListStart
+        \resumeItem{Distributed Audio Server}
+          {Microservice based distributed backend server that is delivering audio podcasts and livestreams to tens of thousands of listeners every day. Written entirely from scratch, working in a very agile 3-man team, working entirely in Linux based distributions.}
+        \resumeItem{Tech Stack}
+          {The projects use a mix of C++17 and Python 3.10, using gRPC for communication.}
+          \resumeItemListStart
+            \resumeItem{C++ Projects}{Both projects use Conan as package manager with CMake as build system. GoogleTest for unit testing.}
+            \resumeItemListStart
+              \resumeItem{HTTP Server}
+              {Boost::Beast and Boost::Asio for HTTP network communication and async multithreading for high concurrent listeners. gRPC communication with Python microservices. Prometheus C++ Client for metrics and monitoring.}
+              \resumeItem{Audio Segmenter}
+              {Audio file and livestream processor, which segments the audio stream at specific timestamps. Written from scratch and on top of Ffmpeg libraries. Its able to do stream remuxing and transcoding, while also analyising the stream, doing silence detection and loudness normalization on the fly.}
+            \resumeItemListEnd
+          \resumeItem{Python Projects}{Designed for ad insertion, ad splicing and impression reporting. They use anyio, aiohttp and boto3 libraries for async and high throughput request handling. Prometheus Python Client for metrics and monitoring.}
+          \resumeItem{Monitoring}{Did Graphana and Prometheus initial setup, and built the relevant Graphana boards for monitoring.}
+          \resumeItem{CI/CD}{Docker and podman with Jenkins pipelines.}
+          \resumeItem{Kubernetes}{Did initial Kubernetes proof-of-concept, validation and deployment for the entire project. Now using fluentbit for image and command syncing, and Ansible for initial host deployment.}
+          \resumeItemListEnd
+        \resumeItem{Responsabilities}
+          {I am in charge of maintaining all projects in a 2-man dev team. The company architect did the initial architecture, and we have to extend and maintain the microservices, while keeping availability and performance as top priorities. We run the }
+      \resumeItemListEnd
+    \resumeSubheading
+      {Endava}{Brasov, Romania}
+      {Senior Software Engineer}{June 2021 - June 2022}
+      \resumeItemListStart
+        \resumeItem{Webex}
+          {Webex is the leading enterprise solution for video conferencing and online meetings. I was in charge of maintaing and developing new shared content features, like sharing files hosted in external services such as DropBox and Google Drive, using C++17 and Qt framework. This had both UI and backend developement involved.}
+        \resumeItem{Unit testing}
+          {Added and maintained unit tests using the Catch2 C++ unit testing framework.}
+      \resumeItemListEnd
     \resumeSubheading
       {Siemens Industry Software}{Brasov, Romania}
       {Software Engineer}{June 2018 - June 2021}
@@ -137,15 +157,6 @@
           {While most of the work of the application was done on the Windows OS, sometimes Linux specific tasks appeared, usually C++ compatibility fixes or fixing automated and unit tests.}
         \resumeItem{Application performance improvements}
           {Worked on multiple tasks that required application benchmarking, usually resulting in doing code changes that improved the performance of certain operations from 10\% to 90\%, while also keeping the code and functionality future proof.}
-      \resumeItemListEnd
-    \resumeSubheading
-      {Endava}{Brasov, Romania}
-      {Senior Software Engineer}{June 2021 - Current}
-      \resumeItemListStart
-        \resumeItem{Webex}
-          {Webex is the leading enterprise solution for video conferencing and online meetings. Was in charge of maintaing and developing new shared content features, like sharing files hosted in other services like DropBox and Google Drive, using C++17.}
-        \resumeItem{Unit testing}
-          {Added and maintained unit tests using the Catch2 C++ unit testing framework.}
       \resumeItemListEnd
       
 % --------Multiple Positions Heading------------
@@ -185,6 +196,27 @@
    }
  \resumeSubHeadingListEnd
 
+%---------LEARNING EXPERIENCES----------
+\iffalse
+\section{Learning Experience}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Siemens Corporate Technology}{Brasov, Romania}
+      {Intern}{Apr 2017 - June 2017}
+      \resumeItemListStart
+        \resumeItem{Principal Component Analsysis Visualization}
+          {Implemented several Principal Component Analysis algorithms to see the differences between them, using Python and C\# for visualization purposes.}
+      \resumeItemListEnd
+    \resumeSubheading
+      {Siemens Industry Software}{Brasov, Romania}
+      {Student}{February 2017 - October 2017}
+      \resumeItemListStart
+        \resumeItem{Spring School \slash\ Summer School}
+          {Took part in the Spring and Summer School programs that Siemens Industry Software provided, which aimed to teach modern C++, coming from people with large ammounts of experience in the industry. These courses culminated in a one month team based project, the result being a small game  framework, written from scratch.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\fi
 
 %-------------------------------------------
 \end{document}
